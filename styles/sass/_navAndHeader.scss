@@ -1,0 +1,46 @@
+header {
+    background-color: $primaryBackground;
+
+    nav { 
+        box-shadow: $boxShadow;
+        position: relative;
+        z-index: 1;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    li {
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+        
+        a:hover {
+            background-color: $primaryColour;
+            color: $secondaryBackground;
+            box-shadow: $boxShadow;
+        }
+    }
+}
+
+.home .wrapper {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        max-width: 550px;
+        margin: 25px 0;
+    }
+}

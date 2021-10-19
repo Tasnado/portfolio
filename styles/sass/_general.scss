@@ -1,0 +1,63 @@
+html {
+    font-size: 125%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, p, nav, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+
+    &::after {
+        content: "";
+        text-align: center;
+        background-color: $primaryColour;
+        display: block;
+        height: 2px;
+        width: 50px;
+        position: absolute;
+        left: calc(50% - 25px);
+        margin-top: 20px;
+    }
+}
+
+.home h2 {
+    font-size: 1.2rem;
+}
+
+.home h2::after,
+.about h2::after {
+    content: none;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+span.colour,
+.home h2 {
+    color: $primaryColour;
+}

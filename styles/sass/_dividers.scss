@@ -1,0 +1,57 @@
+section {
+    overflow: hidden;
+    
+    &:nth-child(odd) {
+        background-color: $primaryBackground;
+    }
+    &:nth-child(even) {
+        background-color: $secondaryBackground;
+    }
+}
+
+.home,
+.projects,
+.contact {
+    position: relative;
+}
+
+.triangleBottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.triangleBottomLeft svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 118px;
+}
+
+.triangleBottomLeft .shape-fill {
+    fill: $secondaryBackground;
+}
+
+.triangleTopRight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.triangleTopRight svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 118px;
+}
+
+.triangleTopRight .shape-fill {
+    fill: $secondaryBackground;
+}
