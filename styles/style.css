@@ -298,6 +298,11 @@ span.colour,
   color: #F13C91;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 section {
   overflow: hidden;
 }
@@ -463,10 +468,26 @@ header li a:hover {
           justify-content: space-between;
 }
 .about .wrapper .imageContent {
-  max-width: 400px;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 21px 21px 0 -5px #F13C91;
+          box-shadow: 21px 21px 0 -5px #F13C91;
+}
+.about .wrapper .imageContent .imageContainer {
+  width: 100%;
+  height: 100%;
 }
 .about .wrapper .textContent {
-  width: calc(100% - 400px - 50px);
+  width: calc(100% - 400px - 70px);
 }
 .about .wrapper .textContent p:nth-of-type(2) {
   margin-top: 3%;
