@@ -124,27 +124,46 @@
             </div>
             <div class="wrapper">
                 <h2>Check out my Projects</h2>
-                <!-- <div class="Project">
-                    <h3></h3>
-                    <div class="mainImage">
-                        <img src="./assets/chatRoom.png" alt="">
-                    </div>
-                    <div class="hoverContent">
-                        <div class="imageContainer">
-                            <img src="./assets/chatRoom2.png" alt="">
-                        </div>
-                        <div class="textContainer">
-                            <div class="projectIcons"></div>
-                            <div class="text">
-                                <p></p>
-                                <p>Technical Challenge:</p>
-                                <p>Technical Win:</p>
+                <ul class="displayProjects">
+                    <li class="projects left">
+                        <div class="content">
+                            <!-- <img src="./assets/planted.png" alt="planted homescreen" class="projectImage"> -->
+                            <div class="textContent">
+                                <h3>Planted</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>SASS</li>
+                                </ul>
+
+                                <div class="projectLinksContainer">
+                                    <a href="#">View Live</a>
+                                    <a href="#">Github</a>  
+                                </div>
                             </div>
-                            <a href="#">View Live</a>
-                            <a href="#">Repo</a>
                         </div>
-                    </div>
-                </div> -->
+                    </li>
+                    <li class="projects right">
+                        <div class="content">
+                            <!-- <img src="./assets/planted.png" alt="planted homescreen" class="projectImage"> -->
+                            <div class="textContent">
+                                <h3>Planted</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>SASS</li>
+                                </ul>
+
+                                <div class="projectLinksContainer">
+                                    <a href="#">View Live</a>
+                                    <a href="#">Github</a>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="triangleBottomLeft">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -187,8 +206,9 @@
                         <label for="name"></label>
                         <input type="text" name="name" placeholder="your name" required>
                         <label for="email"></label>
-                        <input type="email" name="email" placeholder="your email" required>
-                        <label for=""></label>
+                        <input type="email" name="email" placeholder="Email Address">
+                        <label for="sendMessage"></label>
+                        <textarea name="sendMessage" id="sendMessage" cols="30" rows="10" placeholder="Enter your message :)" required></textarea>
                         <button type="submit">Send</button>
                     </form>
                 </div>

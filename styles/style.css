@@ -280,11 +280,16 @@ h2::after {
   content: none;
 }
 
+h3 {
+  font-size: 1.3rem;
+}
+
 p {
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6rem;
+  letter-spacing: 1px;
 }
 
 .wrapper {
@@ -448,7 +453,110 @@ header li a:hover {
 }
 
 .projects .wrapper {
-  padding: calc(5% + 118px);
+  padding: calc(5% + 118px) 0;
+}
+.projects .wrapper ul {
+  position: relative;
+  margin-top: 8%;
+}
+.projects .wrapper ul::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: #F13C91;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+.projects .wrapper li {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+.projects .wrapper li::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -16px;
+  background-color: whitesmoke;
+  border: 4px solid #F13C91;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.projects .wrapper li:hover::after {
+  background-color: #F13C91;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.projects .wrapper .left {
+  left: 0;
+}
+.projects .wrapper .right {
+  left: 50%;
+}
+.projects .wrapper .right::after {
+  left: -10px;
+}
+.projects .wrapper .content {
+  background-color: whitesmoke;
+  position: relative;
+}
+.projects .wrapper .content .textContent {
+  padding: 20px;
+}
+.projects .wrapper .content .textContent h3 {
+  text-align: center;
+  color: #F13C91;
+}
+.projects .wrapper .content .textContent ul {
+  margin: 20px auto;
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.projects .wrapper .content .textContent li {
+  background-color: #FFE5DF;
+  color: #F13C91;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.projects .wrapper .content .textContent ul::after {
+  content: none;
+}
+.projects .wrapper .content .textContent li::after {
+  content: none;
+}
+.projects .wrapper .content .textContent .projectLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.projects .wrapper .content .textContent a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  border-bottom: 3px solid whitesmoke;
+}
+.projects .wrapper .content .textContent a:hover {
+  border-bottom: 3px solid #F13C91;
 }
 
 .about {
