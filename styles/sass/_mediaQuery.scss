@@ -1,0 +1,200 @@
+@media (max-width: 900px) {
+    .projects .wrapper {
+        .imageDesktop {
+            display: none;
+        }
+        .imageMobile {
+            display: inline-block;
+        }
+    }
+
+    .about .aboutContent {
+        .imageContent {
+            width: 300px;
+            height: 300px;
+        }
+        .textContent {
+            width: calc(100% - 300px - 30px);
+        }
+    }
+}
+@media (max-width: 780px) {
+    .skills .wrapper {
+        ul li {
+            width: calc(100% / 3);
+
+            i {
+                font-size: 2.3rem;
+            }
+        }
+    }
+
+    .projects .wrapper {
+        margin: 10% 0;
+
+        .displayProjects::after {
+            content: none;
+        }
+
+        li {
+            width: 100%;
+            margin-bottom: 3%;
+        }
+
+        li::after {
+            content: none;
+        }
+
+        .right {
+            left: 0;
+        }
+
+        .content {
+            .imageDesktop {
+                display: block;
+            }
+            .imageMobile {
+                display: none;
+            }
+
+            ul {
+                margin-top: 2%;
+            }
+        }
+    }
+
+    .about .aboutContent {
+        flex-direction: column;
+        .imageContent {
+            width: 350px;
+            height: 350px;
+        }
+        .textContent {
+            width: 100%;
+            padding: 8% 5% 5% 5%;
+
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    h2,
+    .about .wrapper h2 {
+        font-size: 1.5rem;
+        margin-bottom: calc(5% + 30px);
+    }
+
+    header nav .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .fa-bars {
+            display: block;
+            color: $primaryColour;
+            font-size: 2rem;
+            align-self: flex-end;
+            margin: 20px 10px 10px 0;
+            transition: all .2s ease-in-out;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.5);
+            }
+        }
+        
+        ul {
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+
+            li {
+                margin: 1% 0;
+                
+                a {
+                    @include primBackgroundAndSecColour($primaryColour);
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 100%;
+                    font-size: 1rem;
+                    box-shadow: $boxShadow;
+                    border-radius: 25px;
+                }
+                a:hover,
+                a:focus {
+                    background: $secondaryBackground;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .home {
+        text-align: left;
+        
+        h1,
+        h2 {
+            text-align: left;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .skills .wrapper {
+        ul li {
+            width: calc(100% / 2);
+
+            i {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .projects .wrapper .content {
+        .imageDesktop {
+            display: none;
+        }
+        .imageMobile {
+            display: inline-block;
+        }
+
+        .textContent {
+            ul {
+                margin-bottom: 2%;
+            }
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .contact .wrapper {
+        .socialMediaIcons,
+        form {
+            margin-top: 8%;
+            width: 100%;
+        }
+
+        .contactInfo {
+            width: 100%;
+        }
+    }
+}
+
+
+// height
+@media (max-height: 700px) {
+    .home .wrapper {
+        margin: 2% 0 calc(2% + 118px) 0;
+    }
+}
