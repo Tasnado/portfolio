@@ -1,4 +1,11 @@
 $primaryBackground: #FFE5DF;
 $secondaryBackground: whitesmoke;
 $primaryColour: #F13C91;
+$lighterSecondaryColour: #DF5696;
 $boxShadow: 0 2px 2px -2px rgba(0,0,0,1);
+
+// mixins
+@mixin primBackgroundAndSecColour($backgroundColour) {
+    background-color: $backgroundColour;
+    color: $secondaryBackground;
+}

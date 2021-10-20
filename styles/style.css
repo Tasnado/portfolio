@@ -281,7 +281,7 @@ h2::after {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -306,6 +306,16 @@ span.colour,
 img {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hide {
+  display: none;
 }
 
 section {
@@ -501,6 +511,17 @@ header li a:hover {
 .projects .wrapper .right::after {
   left: -10px;
 }
+.projects .wrapper h3 {
+  text-align: center;
+  color: #F13C91;
+}
+.projects .wrapper h3::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #F13C91;
+  display: inline-block;
+}
 .projects .wrapper .content {
   background-color: whitesmoke;
   position: relative;
@@ -508,12 +529,7 @@ header li a:hover {
 .projects .wrapper .content .textContent {
   padding: 20px;
 }
-.projects .wrapper .content .textContent h3 {
-  text-align: center;
-  color: #F13C91;
-}
 .projects .wrapper .content .textContent ul {
-  margin: 20px auto;
   position: static;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,13 +541,14 @@ header li a:hover {
           justify-content: space-evenly;
 }
 .projects .wrapper .content .textContent li {
+  margin: 20px auto;
   background-color: #FFE5DF;
   color: #F13C91;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 .projects .wrapper .content .textContent ul::after {
   content: none;
@@ -551,12 +568,22 @@ header li a:hover {
 }
 .projects .wrapper .content .textContent a {
   text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
+  background-color: #DF5696;
+  color: whitesmoke;
+  font-size: 1.2rem;
   border-bottom: 3px solid whitesmoke;
+  padding: 10px 20px;
+  margin-top: 2%;
+  border: none;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 2px 2px -2px black;
+          box-shadow: 0 2px 2px -2px black;
+  border: 1px solid transparent;
 }
 .projects .wrapper .content .textContent a:hover {
-  border-bottom: 3px solid #F13C91;
+  background-color: whitesmoke;
+  color: #F13C91;
+  border: 1px solid #F13C91;
 }
 
 .about {
@@ -606,4 +633,48 @@ header li a:hover {
 }
 .contact .wrapper {
   margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact .wrapper h2 {
+  margin-bottom: 5%;
+}
+.contact .wrapper form {
+  width: 80%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact .wrapper form input,
+.contact .wrapper form textArea {
+  background-color: #DF5696;
+  color: whitesmoke;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 25px;
+}
+.contact .wrapper form input {
+  margin-bottom: 20px;
+  height: 50px;
+}
+.contact .wrapper form textarea {
+  padding-top: 20px;
+  height: 300px;
+  resize: none;
 }
