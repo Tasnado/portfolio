@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -454,146 +454,146 @@ header nav li a:focus {
   }
   .confetti-piece:nth-child(1) {
     left: 7%;
-    -webkit-transform: rotate(73deg);
-            transform: rotate(73deg);
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 329ms;
-            animation-delay: 329ms;
-    -webkit-animation-duration: 2998ms;
-            animation-duration: 2998ms;
+    -webkit-animation-delay: 29ms;
+            animation-delay: 29ms;
+    -webkit-animation-duration: 692ms;
+            animation-duration: 692ms;
   }
   .confetti-piece:nth-child(2) {
     left: 14%;
-    -webkit-transform: rotate(-18deg);
-            transform: rotate(-18deg);
+    -webkit-transform: rotate(69deg);
+            transform: rotate(69deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 444ms;
-            animation-delay: 444ms;
-    -webkit-animation-duration: 9865ms;
-            animation-duration: 9865ms;
+    -webkit-animation-delay: 369ms;
+            animation-delay: 369ms;
+    -webkit-animation-duration: 2136ms;
+            animation-duration: 2136ms;
   }
   .confetti-piece:nth-child(3) {
     left: 21%;
-    -webkit-transform: rotate(-32deg);
-            transform: rotate(-32deg);
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 810ms;
-            animation-delay: 810ms;
-    -webkit-animation-duration: 4922ms;
-            animation-duration: 4922ms;
+    -webkit-animation-delay: 820ms;
+            animation-delay: 820ms;
+    -webkit-animation-duration: 9578ms;
+            animation-duration: 9578ms;
   }
   .confetti-piece:nth-child(4) {
     left: 28%;
-    -webkit-transform: rotate(61deg);
-            transform: rotate(61deg);
+    -webkit-transform: rotate(47deg);
+            transform: rotate(47deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 450ms;
-            animation-delay: 450ms;
-    -webkit-animation-duration: 2620ms;
-            animation-duration: 2620ms;
+    -webkit-animation-delay: 322ms;
+            animation-delay: 322ms;
+    -webkit-animation-duration: 8342ms;
+            animation-duration: 8342ms;
   }
   .confetti-piece:nth-child(5) {
     left: 35%;
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 182ms;
-            animation-delay: 182ms;
-    -webkit-animation-duration: 8460ms;
-            animation-duration: 8460ms;
+    -webkit-animation-delay: 518ms;
+            animation-delay: 518ms;
+    -webkit-animation-duration: 3367ms;
+            animation-duration: 3367ms;
   }
   .confetti-piece:nth-child(6) {
     left: 42%;
-    -webkit-transform: rotate(17deg);
-            transform: rotate(17deg);
+    -webkit-transform: rotate(-28deg);
+            transform: rotate(-28deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 157ms;
-            animation-delay: 157ms;
-    -webkit-animation-duration: 5045ms;
-            animation-duration: 5045ms;
+    -webkit-animation-delay: 737ms;
+            animation-delay: 737ms;
+    -webkit-animation-duration: 1969ms;
+            animation-duration: 1969ms;
   }
   .confetti-piece:nth-child(7) {
     left: 49%;
-    -webkit-transform: rotate(57deg);
-            transform: rotate(57deg);
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 721ms;
-            animation-delay: 721ms;
-    -webkit-animation-duration: 2125ms;
-            animation-duration: 2125ms;
+    -webkit-animation-delay: 46ms;
+            animation-delay: 46ms;
+    -webkit-animation-duration: 950ms;
+            animation-duration: 950ms;
   }
   .confetti-piece:nth-child(8) {
     left: 56%;
-    -webkit-transform: rotate(77deg);
-            transform: rotate(77deg);
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 751ms;
-            animation-delay: 751ms;
-    -webkit-animation-duration: 1401ms;
-            animation-duration: 1401ms;
+    -webkit-animation-delay: 108ms;
+            animation-delay: 108ms;
+    -webkit-animation-duration: 2814ms;
+            animation-duration: 2814ms;
   }
   .confetti-piece:nth-child(9) {
     left: 63%;
-    -webkit-transform: rotate(56deg);
-            transform: rotate(56deg);
+    -webkit-transform: rotate(-74deg);
+            transform: rotate(-74deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 871ms;
-            animation-delay: 871ms;
-    -webkit-animation-duration: 7113ms;
-            animation-duration: 7113ms;
+    -webkit-animation-delay: 419ms;
+            animation-delay: 419ms;
+    -webkit-animation-duration: 4128ms;
+            animation-duration: 4128ms;
   }
   .confetti-piece:nth-child(10) {
     left: 70%;
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 245ms;
-            animation-delay: 245ms;
-    -webkit-animation-duration: 1149ms;
-            animation-duration: 1149ms;
+    -webkit-animation-delay: 467ms;
+            animation-delay: 467ms;
+    -webkit-animation-duration: 1990ms;
+            animation-duration: 1990ms;
   }
   .confetti-piece:nth-child(11) {
     left: 77%;
-    -webkit-transform: rotate(-66deg);
-            transform: rotate(-66deg);
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 79ms;
-            animation-delay: 79ms;
-    -webkit-animation-duration: 3918ms;
-            animation-duration: 3918ms;
+    -webkit-animation-delay: 22ms;
+            animation-delay: 22ms;
+    -webkit-animation-duration: 8263ms;
+            animation-duration: 8263ms;
   }
   .confetti-piece:nth-child(12) {
     left: 84%;
-    -webkit-transform: rotate(-53deg);
-            transform: rotate(-53deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 550ms;
-            animation-delay: 550ms;
-    -webkit-animation-duration: 4354ms;
-            animation-duration: 4354ms;
+    -webkit-animation-delay: 510ms;
+            animation-delay: 510ms;
+    -webkit-animation-duration: 5637ms;
+            animation-duration: 5637ms;
   }
   .confetti-piece:nth-child(13) {
     left: 91%;
-    -webkit-transform: rotate(61deg);
-            transform: rotate(61deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
     -webkit-animation: makeItRain 8000ms infinite ease-out;
             animation: makeItRain 8000ms infinite ease-out;
-    -webkit-animation-delay: 679ms;
-            animation-delay: 679ms;
-    -webkit-animation-duration: 2157ms;
-            animation-duration: 2157ms;
+    -webkit-animation-delay: 831ms;
+            animation-delay: 831ms;
+    -webkit-animation-duration: 1485ms;
+            animation-duration: 1485ms;
   }
   .confetti-piece:nth-child(odd) {
     background: #17d3ff;
@@ -973,7 +973,7 @@ header nav li a:focus {
 
   /* Your css */
 }
-@media (prefers-color-scheme: dark) and (max-width: 900px) {
+@media (prefers-color-scheme: light) and (max-width: 900px) {
   .about .aboutContent .imageContent {
     width: 300px;
     height: 300px;
@@ -982,7 +982,7 @@ header nav li a:focus {
     width: calc(100% - 300px - 30px);
   }
 }
-@media (prefers-color-scheme: dark) and (max-width: 780px) {
+@media (prefers-color-scheme: light) and (max-width: 780px) {
   .skills .wrapper ul li {
     width: calc(100% / 3);
   }
@@ -1028,7 +1028,7 @@ header nav li a:focus {
     text-align: center;
   }
 }
-@media (prefers-color-scheme: dark) and (max-width: 530px) {
+@media (prefers-color-scheme: light) and (max-width: 530px) {
   h2,
 .about .wrapper h2 {
     font-size: 1.5rem;
@@ -1142,7 +1142,7 @@ header nav .wrapper ul li a:focus {
     width: 100%;
   }
 }
-@media (prefers-color-scheme: dark) and (max-height: 700px) {
+@media (prefers-color-scheme: light) and (max-height: 700px) {
   .home .wrapper {
     margin: 2% 0 calc(2% + 118px) 0;
   }
