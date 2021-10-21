@@ -505,10 +505,10 @@ header nav li a:focus {
   left: 0;
 }
 .theProjects .wrapper .right {
-  left: 50%;
+  left: 51%;
 }
 .theProjects .wrapper .right::after {
-  left: -10px;
+  left: -19px;
 }
 .theProjects .wrapper h3 {
   text-align: center;
@@ -526,8 +526,8 @@ header nav li a:focus {
   cursor: pointer;
 }
 .theProjects .wrapper .content:hover, .theProjects .wrapper .content:focus {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .theProjects .wrapper .content .textContent.showText {
   visibility: visible;
