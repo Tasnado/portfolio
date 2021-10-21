@@ -1,8 +1,7 @@
-
 const init = () => {
     const burgerMenu = document.querySelector("#burgerMenu");
     const projects = document.querySelectorAll(".projects");
-    
+
     burgerMenu.addEventListener('click', () => {
         const navigation = document.querySelector("#navigation");
         navigation.classList.toggle("show");
@@ -15,7 +14,7 @@ const init = () => {
             textContent.classList.toggle("showText");
         });
 
-        textContent.addEventListener('click', function() {
+        textContent.addEventListener('click', function () {
             textContent.classList.toggle("showText");
         })
     });
