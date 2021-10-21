@@ -313,6 +313,11 @@ footer {
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+}
+
 section {
   overflow: hidden;
 }
