@@ -1,15 +1,17 @@
-@import '_setup';
-@import '_variables';
-@import '_general';
-@import '_dividers';
-@import '_navAndHeader';
-@import '_confettiAnimation';
-@import '_skills';
-@import '_projects';
-@import '_about';
-@import '_contact';
-@import '_mediaQuery';
-
+@media (prefers-color-scheme: dark) {
+    @import '_setup';
+    @import '_variables';
+    @import '_general';
+    @import '_dividers';
+    @import '_navAndHeader';
+    @import '_confettiAnimation';
+    @import '_skills';
+    @import '_projects';
+    @import '_about';
+    @import '_contact';
+    @import '_mediaQuery';
+    /* Your css */
+}
 //============================================================================== 
 // TYPOGRAPHY
 //==============================================================================
