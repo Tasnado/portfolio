@@ -32,10 +32,6 @@ section {
     height: 118px;
 }
 
-.triangleBottomLeft .shape-fill {
-    fill: $secondaryBackground;
-}
-
 .triangleTopRight {
     position: absolute;
     top: 0;
@@ -51,7 +47,13 @@ section {
     width: calc(115% + 1.3px);
     height: 118px;
 }
-
-.triangleTopRight .shape-fill {
-    fill: $secondaryBackground;
+@media (prefers-color-scheme: light) {
+    .shape-fill {
+        fill: $secondaryBackground;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .shape-fill {
+        background: rgb(30, 32, 33);
+    }
 }
