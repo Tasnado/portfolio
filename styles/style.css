@@ -313,10 +313,6 @@ footer {
   font-family: "Open Sans", sans-serif;
 }
 
-.hide {
-  display: none;
-}
-
 section {
   overflow: hidden;
 }
@@ -328,7 +324,7 @@ section:nth-child(even) {
 }
 
 .home,
-.projects,
+.theProjects,
 .contact {
   position: relative;
 }
@@ -465,17 +461,33 @@ header nav li a:focus {
   margin-top: 10px;
 }
 
-.projects .wrapper {
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+.theProjects .wrapper {
   padding: calc(5% + 118px) 0;
 }
-.projects .wrapper .imageMobile {
-  display: none;
-}
-.projects .wrapper ul {
+.theProjects .wrapper ul {
   position: relative;
   margin-top: 8%;
 }
-.projects .wrapper ul::after {
+.theProjects .wrapper ul::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -484,12 +496,12 @@ header nav li a:focus {
   bottom: 0;
   left: 50%;
 }
-.projects .wrapper li {
+.theProjects .wrapper li {
   padding: 10px 40px;
   position: relative;
   width: 50%;
 }
-.projects .wrapper li::after {
+.theProjects .wrapper li::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -503,39 +515,51 @@ header nav li a:focus {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.projects .wrapper li:hover::after, .projects .wrapper li:focus::after {
+.theProjects .wrapper li:hover::after, .theProjects .wrapper li:focus::after {
   background-color: #F13C91;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
-.projects .wrapper .left {
+.theProjects .wrapper .left {
   left: 0;
 }
-.projects .wrapper .right {
+.theProjects .wrapper .right {
   left: 50%;
 }
-.projects .wrapper .right::after {
+.theProjects .wrapper .right::after {
   left: -10px;
 }
-.projects .wrapper h3 {
+.theProjects .wrapper h3 {
   text-align: center;
   color: #F13C91;
 }
-.projects .wrapper h3::after {
+.theProjects .wrapper h3::after {
   content: "";
   width: 100%;
   height: 2px;
   background-color: #F13C91;
   display: inline-block;
 }
-.projects .wrapper .content {
+.theProjects .wrapper .content {
   background-color: whitesmoke;
   position: relative;
 }
-.projects .wrapper .content .textContent {
-  padding: 20px;
+.theProjects .wrapper .content:hover, .theProjects .wrapper .content:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.projects .wrapper .content .textContent ul {
+.theProjects .wrapper .content .textContent {
+  visibility: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.theProjects .wrapper .content .textContent.showText {
+  padding: 20px;
+  visibility: visible;
+  height: 100%;
+}
+.theProjects .wrapper .content ul {
   position: static;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,7 +571,7 @@ header nav li a:focus {
           justify-content: space-evenly;
   margin-top: 0;
 }
-.projects .wrapper .content .textContent li {
+.theProjects .wrapper .content li {
   margin: 5% auto 0 auto;
   background-color: #FFE5DF;
   color: #F13C91;
@@ -557,13 +581,13 @@ header nav li a:focus {
   padding: 5px 10px;
   border-radius: 8px;
 }
-.projects .wrapper .content .textContent ul::after {
+.theProjects .wrapper .content ul::after {
   content: none;
 }
-.projects .wrapper .content .textContent li::after {
+.theProjects .wrapper .content li::after {
   content: none;
 }
-.projects .wrapper .content .textContent .projectLinksContainer {
+.theProjects .wrapper .content .projectLinksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,7 +597,7 @@ header nav li a:focus {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.projects .wrapper .content .textContent a {
+.theProjects .wrapper .content a {
   text-decoration: none;
   background-color: #DF5696;
   color: whitesmoke;
@@ -588,8 +612,8 @@ header nav li a:focus {
   border: 1px solid transparent;
   text-align: center;
 }
-.projects .wrapper .content .textContent a:hover,
-.projects .wrapper .content .textContent a:focus {
+.theProjects .wrapper .content a:hover,
+.theProjects .wrapper .content a:focus {
   background-color: whitesmoke;
   color: #F13C91;
   border: 1px solid #F13C91;
@@ -739,13 +763,6 @@ header nav li a:focus {
 }
 
 @media (max-width: 900px) {
-  .projects .wrapper .imageDesktop {
-    display: none;
-  }
-  .projects .wrapper .imageMobile {
-    display: inline-block;
-  }
-
   .about .aboutContent .imageContent {
     width: 300px;
     height: 300px;
@@ -762,29 +779,23 @@ header nav li a:focus {
     font-size: 2.3rem;
   }
 
-  .projects .wrapper {
+  .theProjects .wrapper {
     margin: 10% 0;
   }
-  .projects .wrapper .displayProjects::after {
+  .theProjects .wrapper .displayProjects::after {
     content: none;
   }
-  .projects .wrapper li {
+  .theProjects .wrapper li {
     width: 100%;
     margin-bottom: 3%;
   }
-  .projects .wrapper li::after {
+  .theProjects .wrapper li::after {
     content: none;
   }
-  .projects .wrapper .right {
+  .theProjects .wrapper .right {
     left: 0;
   }
-  .projects .wrapper .content .imageDesktop {
-    display: block;
-  }
-  .projects .wrapper .content .imageMobile {
-    display: none;
-  }
-  .projects .wrapper .content ul {
+  .theProjects .wrapper .content ul {
     margin-top: 2%;
   }
 
@@ -839,7 +850,11 @@ header nav li a:focus {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
+  header nav .wrapper .show {
+    display: block;
+  }
   header nav .wrapper ul {
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -889,16 +904,10 @@ header nav .wrapper ul li a:focus {
     font-size: 1rem;
   }
 
-  .projects .wrapper .content .imageDesktop {
-    display: none;
-  }
-  .projects .wrapper .content .imageMobile {
-    display: inline-block;
-  }
-  .projects .wrapper .content .textContent ul {
+  .theProjects .wrapper .content .textContent ul {
     margin-bottom: 2%;
   }
-  .projects .wrapper .content .textContent a {
+  .theProjects .wrapper .content .textContent a {
     font-size: 1rem;
   }
 

@@ -23,13 +23,13 @@
     <header>
         <nav>
             <div class="wrapper">
-                <i class="fas fa-bars"></i>
-                <ul class="navigation">
+                <i class="fas fa-bars" id="burgerMenu"></i>
+                <ul class="navigation" id="navigation">
                     <li>
                         <a href="#skills">Tools</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#theProjects">Projects</a>
                     </li>
                     <li>
                         <a href="#about">About</a>
@@ -114,7 +114,7 @@
             </div>
         </section>
 
-        <section class="projects" id="projects">
+        <section class="theProjects" id="theProjects">
             <div class="triangleTopRight">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -126,43 +126,41 @@
                 <ul class="displayProjects">
                     <li class="projects left">
                         <div class="content">
-                            <img src="./assets/chatApp.png" alt="planted homescreen" class="projectImage imageDesktop">
-                            <img src="./assets/chatAppMobile.png" alt="planted homescreen" class="projectImage imageMobile">
-                            <div class="textContent">
-                                <h3>Chat Room</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                            <img src="./assets/boxOfficeBofo.png" alt="planted homescreen" class="projectImage imageDesktop">
+                            <div class="textContent" id="projectTextContent">
+                                <h3>Box Office Bofo</h3>
+                                <p>Box Office Bofo allows users to log in using their gmail account to search for summer movies by year and rank the top 10 grossing films. The user can create multiple movie lists for multiple years. The lists can be deleted.See if you can guess what the top 10 grossing summer movies for 2020 was!</p>
                                 <ul>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
                                     <li>React</li>
                                     <li>Firebase</li>
+                                    <li>API</li>
                                 </ul>
                                 
                                 <div class="projectLinksContainer">
-                                    <a href="https://project-3-chat-room.netlify.app/">View Live</a>
-                                    <a href="https://github.com/Tasnado/tasnia-nabila-project-3">Github</a>  
+                                    <a href="https://box-office-boffo.netlify.app/" target="_blank">View Live</a>
+                                    <a href="https://github.com/BoxOfficeBoffo/BoxOfficeBoffo" target="_blank">Github</a>  
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="projects right">
                         <div class="content">
-                            <img src="./assets/boxOfficeBofo.png" alt="planted homescreen" class="projectImage imageDesktop">
-                            <img src="./assets/boxOfficeBofoMobile.png" alt="planted homescreen" class="projectImage imageMobile">
-                            <div class="textContent">
-                                <h3>Box Office Bofo</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                            <img src="./assets/chatApp.png" alt="planted homescreen" class="projectImage imageDesktop">
+                            <div class="textContent" id="projectTextContent">
+                                <h3>Chat Room</h3>
+                                <p>A matrix-themed chat room that user can use with their google account. The chat room is equipped with emojis. I've also added hidden easter eggs where the sent message sound will change based on specific keywords in the sentence. Firebase and google authentication is used to keep track of whether user is sending and recieving the message. Give it a go, chat or leave messeges for others using the Chat Room.</p>
                                 <ul>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
                                     <li>React</li>
                                     <li>Firebase</li>
-                                    <li>Rest API</li>
                                 </ul>
                                 
                                 <div class="projectLinksContainer">
-                                    <a href="https://box-office-boffo.netlify.app/">View Live</a>
-                                    <a href="https://github.com/BoxOfficeBoffo/BoxOfficeBoffo">Github</a>  
+                                    <a href="https://project-3-chat-room.netlify.app/" target="_blank">View Live</a>
+                                    <a href="https://github.com/Tasnado/tasnia-nabila-project-3" target="_blank">Github</a>  
                                 </div>
                             </div>
                         </div>
@@ -170,20 +168,20 @@
                     <li class="projects left">
                         <div class="content">
                             <img src="./assets/mealMasterChef.png" alt="planted homescreen" class="projectImage imageDesktop">
-                            <img src="./assets/mealMasterChefMobile.png" alt="planted homescreen" class="projectImage imageMobile">
-                            <div class="textContent">
+                            <div class="textContent" id="projectTextContent">
                                 <h3>Meal Master Chef</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                                <p>MMC provides multiple categories for the user to choose from. One they choose a category, they will be given 3 random meals from that category. If they don't like their option, they can keep generating 3 new meals until there are no meals left in the category. If they do like a meal, the user can click on a meal to recieve meal prep instructions and ingredients with an accompanying YouTube video. Worked in pair programming with Hal Forrest.</p>
                                 <ul>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
                                     <li>SASS</li>
                                     <li>JavaScript</li>
+                                    <li>API</li>
                                 </ul>
                                 
                                 <div class="projectLinksContainer">
-                                    <a href="https://mealmasterchef.github.io/mealMasterchefApp/">View Live</a>
-                                    <a href="https://github.com/mealMasterchef/mealMasterchefApp">Github</a>  
+                                    <a href="https://mealmasterchef.github.io/mealMasterchefApp/" target="_blank">View Live</a>
+                                    <a href="https://github.com/mealMasterchef/mealMasterchefApp" target="_blank">Github</a>  
                                 </div>
                             </div>
                         </div>
@@ -191,10 +189,9 @@
                     <li class="projects right">
                         <div class="content">
                             <img src="./assets/planted.png" alt="planted homescreen" class="projectImage imageDesktop">
-                            <img src="./assets/plantedMobile.png" alt="planted homescreen" class="projectImage imageMobile">
-                            <div class="textContent">
+                            <div class="textContent" id="projectTextContent">
                                 <h3>Planted</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia aliquam. Cupiditate repellat labore tempora laborum veritatis temporibus ratione blanditiis quasi nesciunt ab exercitationem delectus at neque, veniam, reiciendis aperiam.</p>
+                                <p>Planted is a multi-page conversion of a PSD design made fully responsive and accessible. This project followed provided guideline and file-naming convention.</p>
                                 <ul>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
@@ -202,8 +199,8 @@
                                 </ul>
                                 
                                 <div class="projectLinksContainer">
-                                    <a href="https://tasnado.github.io/tasnia-nabila-project-one/">View Live</a>
-                                    <a href="https://github.com/Tasnado/tasnia-nabila-project-one">Github</a>  
+                                    <a href="https://tasnado.github.io/tasnia-nabila-project-one/" target="_blank">View Live</a>
+                                    <a href="https://github.com/Tasnado/tasnia-nabila-project-one" target="_blank">Github</a>  
                                 </div>
                             </div>
                         </div>
@@ -249,7 +246,7 @@
             <div class="wrapper">
                 <h2>Get in Touch</h2>
                 <div class="contactInfo">
-                    <p>Feel free to send me a message. We can grab coffee and chat about all the cool places you've travled/want to go to and your adorable pets.</p>
+                    <p>Do not hesitate to send me a message. You can also schedule an appointment using calendly. We can grab coffee and chat about all the cool places you've travled/want to go to and your adorable pets.</p>
                     <div class="socialMediaIcons">
                         <a href="mailto:tasnianabila1@gmail.com">
                             <i class="fas fa-envelope"></i>
@@ -271,7 +268,7 @@
                     <label for="email" class="sr-only">Your email</label>
                     <input type="email" name="email" placeholder="Your email">
                     <label for="sendMessage"></label>
-                    <textarea name="sendMessage" id="sendMessage" placeholder="Hi Taz! I heard you studied abroad in Tokyo for a year, let's grab coffee and exchange travel tips!" required></textarea>
+                    <textarea name="sendMessage" id="sendMessage" placeholder="Hi Taz! I heard you studied abroad in Tokyo for a year, let's grab coffee and exchange travel stories!" required></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>

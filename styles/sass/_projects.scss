@@ -1,9 +1,7 @@
-.projects .wrapper {
-    padding: calc(5% + 118px) 0;
+@include animationKeyframe;
 
-    .imageMobile {
-        display: none;
-    }
+.theProjects .wrapper {
+    padding: calc(5% + 118px) 0;
 
     ul {
         position: relative;
@@ -73,60 +71,72 @@
     .content {
         background-color: whitesmoke;
         position: relative;
-        
+
+        &:hover,
+        &:focus {
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
         .textContent {
+            visibility: hidden;
+            height: 0;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .textContent.showText {
             padding: 20px;
-            
-            ul {
-                position: static;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                margin-top: 0;
-            }
-            
-            li {
-                margin: 5% auto 0 auto;
-                background-color: $primaryBackground;
-                color: $primaryColour;
-                width: fit-content;
-                padding: 5px 10px;
-                border-radius: 8px;
-            }
-            
-            ul::after {
-                content: none;
-            }
+            visibility: visible;
+            height: 100%;
+        }
+        ul {
+            position: static;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 0;
+        }
+        
+        li {
+            margin: 5% auto 0 auto;
+            background-color: $primaryBackground;
+            color: $primaryColour;
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        
+        ul::after {
+            content: none;
+        }
 
-            li::after {
-                content: none;
-            }
+        li::after {
+            content: none;
+        }
 
-            .projectLinksContainer {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
+        .projectLinksContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
-            a {
-                text-decoration: none;
-                @include primBackgroundAndSecColour($lighterSecondaryColour);
-                font-size: 1.2rem;
-                padding: 10px 20px;
-                width: 100%;
-                margin-top: 5%;
-                border: none;
-                border-radius: 25px;
-                box-shadow: $boxShadow;
-                border: 1px solid transparent;
-                text-align: center;
-            }
-            a:hover,
-            a:focus {
-                background-color: $secondaryBackground;
-                color: $primaryColour;
-                border: 1px solid $primaryColour;
-            }
+        a {
+            text-decoration: none;
+            @include primBackgroundAndSecColour($lighterSecondaryColour);
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: 5%;
+            border: none;
+            border-radius: 25px;
+            box-shadow: $boxShadow;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        a:hover,
+        a:focus {
+            background-color: $secondaryBackground;
+            color: $primaryColour;
+            border: 1px solid $primaryColour;
         }
     }
 
