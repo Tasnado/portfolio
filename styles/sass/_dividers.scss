@@ -55,3 +55,9 @@ section {
 .triangleTopRight .shape-fill {
     fill: $secondaryBackground;
 }
+
+@media (prefers-color-scheme:dark) {
+    svg {
+        background-color: #131516;
+    }
+}
