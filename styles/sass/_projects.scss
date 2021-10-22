@@ -27,17 +27,15 @@
             width: 25px;
             height: 25px;
             right: -16px;
-            background-color: $secondaryBackground;
+            background-color: $primaryColour;
             border: 4px solid $primaryColour;
             top: 15px;
             border-radius: 50%;
-            z-index: 1;
             transition: all .2s ease-in-out;
 
         }
         &:hover::after,
         &:focus::after {
-            background-color: $primaryColour;
             transform: scale(1.5);
         }
 
@@ -69,10 +67,11 @@
     
     .content {
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
         
         &:hover,
         &:focus {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .textContent.showText {

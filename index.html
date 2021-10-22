@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/69e691cb03.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -36,6 +36,9 @@
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="resume">Resume</a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +140,7 @@
             <div class="wrapper">
                 <h2>Check out my Projects</h2>
                 <ul class="displayProjects">
-                    <li class="projects left">
+                    <li class="projects left" data-aos="fade-right">
                         <div class="content">
                             <img src="./assets/boxOfficeBofo.png" alt="planted homescreen"
                                 class="projectImage imageDesktop">
@@ -163,7 +166,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="projects right">
+                    <li class="projects right" data-aos="fade-left">
                         <div class="content">
                             <img src="./assets/chatApp.png" alt="planted homescreen" class="projectImage imageDesktop">
                             <div class="textContent" id="projectTextContent">
@@ -187,7 +190,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="projects left">
+                    <li class="projects left" data-aos="fade-right">
                         <div class="content">
                             <img src="./assets/mealMasterChef.png" alt="planted homescreen"
                                 class="projectImage imageDesktop">
@@ -216,7 +219,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="projects right">
+                    <li class="projects right" data-aos="fade-left">
                         <div class="content">
                             <img src="./assets/planted.png" alt="planted homescreen" class="projectImage imageDesktop">
                             <div class="textContent" id="projectTextContent">
@@ -251,7 +254,7 @@
         <section class="about" id="about">
             <div class="wrapper">
                 <h2>About <span class="colour">Me</span></h2>
-                <div class="aboutContent">
+                <div class="aboutContent" data-aos="fade-up">
                     <div class="imageContent">
                         <div class="imageContainer">
                             <img src="./assets/image.jpg" alt="">
@@ -322,6 +325,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
 </body>
 
