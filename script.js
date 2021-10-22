@@ -19,5 +19,6 @@ const init = () => {
         })
     });
 }
+AOS.init();
 
 init();
