@@ -47,13 +47,7 @@ section {
     width: calc(115% + 1.3px);
     height: 118px;
 }
-@media (prefers-color-scheme: light) {
-    .shape-fill {
-        fill: $secondaryBackground;
-    }
-}
-@media (prefers-color-scheme: dark) {
-    .shape-fill {
-        fill: rgb(30, 32, 33);
-    }
+
+.shape-fill {
+    fill: $secondaryBackground;
 }
