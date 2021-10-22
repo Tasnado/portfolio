@@ -52,7 +52,7 @@ section {
         fill: $secondaryBackground;
     }
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     .shape-fill {
         fill: rgb(30, 32, 33);
     }
