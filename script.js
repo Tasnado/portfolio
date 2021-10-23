@@ -9,7 +9,7 @@ const init = () => {
 
     projects.forEach((project) => {
         const projectImage = project.querySelector(".projectImage");
-        const textContent = project.querySelector("#projectTextContent");
+        const textContent = project.querySelector(".projectTextContent");
         projectImage.addEventListener('click', () => {
             textContent.classList.toggle("showText");
         });
