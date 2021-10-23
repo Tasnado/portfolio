@@ -37,7 +37,7 @@ header {
         }
 
         .resume {
-            @include primBackgroundAndSecColour($primaryColour);
+            @include primBackgroundAndSecColour($darkerPink);
             &:hover {
                 background-color: #17d3ff;
             }
