@@ -6,8 +6,10 @@ header {
         position: relative;
         z-index: 1;
 
-        .fa-bars {
+        button {
             display: none;
+            background: transparent;
+            border: none;
         }
     
         ul {
@@ -33,10 +35,15 @@ header {
                 box-shadow: $boxShadow;
             }
         }
+
+        .resume {
+            @include primBackgroundAndSecColour($primaryColour);
+            &:hover {
+                background-color: #17d3ff;
+            }
+        }
     }
 }
-
-
 
 .home .wrapper {
     height: 95vh;

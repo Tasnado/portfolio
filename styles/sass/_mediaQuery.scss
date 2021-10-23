@@ -78,7 +78,7 @@
         flex-direction: column;
         position: relative;
 
-        .fa-bars {
+        button {
             display: block;
             color: $primaryColour;
             font-size: 2rem;
@@ -126,6 +126,9 @@
                     background: $secondaryBackground;
                     color: black;
                 }
+            }
+            .resume {
+                background-color: #17d3ff;
             }
         }
     }
