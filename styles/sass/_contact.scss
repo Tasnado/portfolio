@@ -47,9 +47,10 @@
 
             input,
             textArea {
-                @include primBackgroundAndSecColour($lighterSecondaryColour);
+                background-color: $secondaryBackground;
+                color: $primaryColour;
+                border: 1px solid $primaryColour;
                 padding: 5px 30px;
-                border: none;
                 border-radius: 8px;
             }
 
@@ -59,9 +60,8 @@
             textarea:focus,
             button:hover,
             button:focus {
-                background-color: $secondaryBackground;
-                color: $primaryColour;
-                border: 1px solid $primaryColour;
+                border: 1px solid #17d3ff;
+                box-shadow: $boxShadow;
             }
             
             input {
