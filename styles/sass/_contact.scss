@@ -17,8 +17,6 @@
             padding: 5% 5% 0 5%;
         }
 
-        
-
         .socialMediaIcons {
             width: 100%;
             display: flex;
@@ -57,9 +55,7 @@
             input:hover,
             input:focus,
             textarea:hover,
-            textarea:focus,
-            button:hover,
-            button:focus {
+            textarea:focus {
                 border: 1px solid $blueHover;
                 box-shadow: $boxShadow;
             }
@@ -85,6 +81,48 @@
                 border-radius: 20px;
                 box-shadow: $boxShadow;
                 border: 1px solid transparent;
+
+                &:hover,
+                &:focus {
+                    background-color: $blueHover;
+                }
+            }
+        }
+    }
+}
+
+.darkMode .contact {
+    .wrapper {
+        .socialMediaIcons {
+            a {
+                color: $primaryColourDark;
+            }
+        }
+
+        form {
+            input,
+            textArea {
+                background-color: $secondaryBackgroundDark;
+                color: $fontColourDark;
+                border: 1px solid $primaryColourDark;
+            }
+
+            input:hover,
+            input:focus,
+            textarea:hover,
+            textarea:focus {
+                border: 1px solid $darkerPink;
+            }
+
+            button {
+                background-color: $primaryColourDark;
+                color: $primaryBackgroundDark;
+
+                &:hover,
+                &:focus {
+                    background-color: $darkerPink;
+                    color: $primaryBackground;
+                }
             }
         }
     }

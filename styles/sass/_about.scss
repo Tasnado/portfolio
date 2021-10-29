@@ -36,3 +36,11 @@
         }
     }
 }
+
+.darkMode .about {
+    .aboutContent {
+        .imageContent {
+            box-shadow: 21px 21px 0 -5px $primaryColourDark;
+        }
+    }
+}

@@ -144,3 +144,44 @@
     }
 
 }
+
+.darkMode .theProjects .wrapper {
+    ul {
+        &::after {
+            background: $primaryColourDark;
+        }
+    }
+    li {
+        &::after {
+            background-color: $primaryColourDark;
+            border: 4px solid $primaryColourDark;
+        }
+    }
+    h3 {
+        color: $primaryColourDark;
+        &::after {
+            background-color: $primaryColourDark;
+        }
+    }
+    .content {
+        .textContent.showText {
+            background-color: $secondaryBackgroundDark;
+        }
+        li {
+            background-color: $primaryBackgroundDark;
+            color: $fontColourDark;
+        }
+        a {
+            background: $primaryColourDark;
+            color: $primaryBackgroundDark;
+            
+        }
+        a:hover,
+        a:focus {
+            background: $secondaryBackgroundDark;
+            color: $primaryColourDark;
+            border: 1px solid $primaryColourDark;
+        }
+    }
+
+}

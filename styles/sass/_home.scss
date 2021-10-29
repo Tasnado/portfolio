@@ -1,9 +1,22 @@
 .home {
-    position: relative;
+    .wrapper {
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        p {
+            max-width: 550px;
+            margin: 25px 0;
+        }
+    }
 
     .modeToggleCheck {
         position: absolute;
-        top: 0;
+        top: 10px;
+        left: 0;
     }
 
     .toggleCheckbox {
@@ -136,19 +149,6 @@
         100% {
             left: 50px;
             width: 38px;
-        }
-    }
-
-    .wrapper {
-        height: 95vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        p {
-            max-width: 550px;
-            margin: 25px 0;
         }
     }
 }

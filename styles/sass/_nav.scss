@@ -44,3 +44,28 @@ header {
         }
     }
 }
+
+.darkMode header {
+    background-color: $primaryBackgroundDark;
+
+    nav {
+        li {
+            a {
+                color: $fontColourDark;
+
+                &:hover,
+                &:focus {
+                    background: $primaryColourDark;
+                    color: $primaryBackgroundDark;
+                }
+            }
+        }
+
+        .resume {
+            background-color: $darkerPink;
+            &:hover {
+                background-color: $blueHover;
+            }
+        }
+    }
+}

@@ -128,7 +128,31 @@
                 }
             }
             .resume {
-                background-color: #17d3ff;
+                background-color: $darkerPink;
+                color: $fontColourDark;
+            }
+        }
+    }
+
+    .darkMode header nav .wrapper {
+        button {
+            color: $primaryColourDark;
+        }
+        ul {
+            li {
+                a {
+                    background: $primaryColourDark;
+                    color: black;
+                }
+                a:hover,
+                a:focus {
+                    background: $secondaryBackgroundDark;
+                    color: $fontColourDark;
+                }
+            }
+            .resume {
+                background-color: $darkerPink;
+                color: $fontColourDark;
             }
         }
     }

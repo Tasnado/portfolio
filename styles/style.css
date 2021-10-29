@@ -266,13 +266,17 @@ h2 {
 h2::after {
   content: "";
   text-align: center;
-  background-color: #77bdfb;
+  background-color: #F13C91;
   display: block;
   height: 2px;
   width: 50px;
   position: absolute;
   left: calc(50% - 25px);
   margin-top: 20px;
+}
+
+.darkMode h2::after {
+  background-color: #77bdfb;
 }
 
 .home h2 {
@@ -295,6 +299,10 @@ p {
   letter-spacing: 1px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1080px;
   width: 95%;
@@ -303,12 +311,23 @@ p {
 
 .colour,
 .home h2 {
+  color: #F13C91;
+}
+
+.darkMode .colour,
+.darkMode .home h2 {
   color: #77bdfb;
 }
 
 .underline {
   text-decoration: underline;
   color: black;
+  -webkit-text-decoration-color: #F13C91;
+          text-decoration-color: #F13C91;
+}
+
+.darkMode .underline {
+  color: #ECF2F8;
   -webkit-text-decoration-color: #77bdfb;
           text-decoration-color: #77bdfb;
 }
@@ -427,7 +446,7 @@ header nav li a {
 }
 header nav li a:hover,
 header nav li a:focus {
-  background-color: #77bdfb;
+  background-color: #F13C91;
   color: whitesmoke;
   -webkit-box-shadow: 0 2px 2px -2px black;
           box-shadow: 0 2px 2px -2px black;
@@ -440,12 +459,48 @@ header nav .resume:hover {
   background-color: #72cce3;
 }
 
-.home {
+.darkMode header {
+  background-color: #353C51;
+}
+.darkMode header nav li a {
+  color: #ECF2F8;
+}
+.darkMode header nav li a:hover, .darkMode header nav li a:focus {
+  background: #77bdfb;
+  color: #353C51;
+}
+.darkMode header nav .resume {
+  background-color: #A70C54;
+}
+.darkMode header nav .resume:hover {
+  background-color: #72cce3;
+}
+
+.home .wrapper {
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+}
+.home .wrapper p {
+  max-width: 550px;
+  margin: 25px 0;
 }
 .home .modeToggleCheck {
   position: absolute;
-  top: 0;
+  top: 10px;
+  left: 0;
 }
 .home .toggleCheckbox {
   display: none;
@@ -620,26 +675,6 @@ header nav .resume:hover {
     width: 38px;
   }
 }
-.home .wrapper {
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.home .wrapper p {
-  max-width: 550px;
-  margin: 25px 0;
-}
 
 .confetti {
   display: -webkit-box;
@@ -665,146 +700,146 @@ header nav .resume:hover {
 }
 .confetti-piece:nth-child(1) {
   left: 7%;
-  -webkit-transform: rotate(-17deg);
-          transform: rotate(-17deg);
+  -webkit-transform: rotate(-61deg);
+          transform: rotate(-61deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 693ms;
-          animation-delay: 693ms;
-  -webkit-animation-duration: 9495ms;
-          animation-duration: 9495ms;
+  -webkit-animation-delay: 502ms;
+          animation-delay: 502ms;
+  -webkit-animation-duration: 4966ms;
+          animation-duration: 4966ms;
 }
 .confetti-piece:nth-child(2) {
   left: 14%;
-  -webkit-transform: rotate(39deg);
-          transform: rotate(39deg);
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 797ms;
-          animation-delay: 797ms;
-  -webkit-animation-duration: 4779ms;
-          animation-duration: 4779ms;
+  -webkit-animation-delay: 578ms;
+          animation-delay: 578ms;
+  -webkit-animation-duration: 4231ms;
+          animation-duration: 4231ms;
 }
 .confetti-piece:nth-child(3) {
   left: 21%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 278ms;
-          animation-delay: 278ms;
-  -webkit-animation-duration: 8801ms;
-          animation-duration: 8801ms;
+  -webkit-animation-delay: 85ms;
+          animation-delay: 85ms;
+  -webkit-animation-duration: 6986ms;
+          animation-duration: 6986ms;
 }
 .confetti-piece:nth-child(4) {
   left: 28%;
-  -webkit-transform: rotate(-80deg);
-          transform: rotate(-80deg);
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 98ms;
-          animation-delay: 98ms;
-  -webkit-animation-duration: 4307ms;
-          animation-duration: 4307ms;
+  -webkit-animation-delay: 839ms;
+          animation-delay: 839ms;
+  -webkit-animation-duration: 3422ms;
+          animation-duration: 3422ms;
 }
 .confetti-piece:nth-child(5) {
   left: 35%;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+  -webkit-transform: rotate(-26deg);
+          transform: rotate(-26deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 108ms;
-          animation-delay: 108ms;
-  -webkit-animation-duration: 8366ms;
-          animation-duration: 8366ms;
+  -webkit-animation-delay: 758ms;
+          animation-delay: 758ms;
+  -webkit-animation-duration: 1728ms;
+          animation-duration: 1728ms;
 }
 .confetti-piece:nth-child(6) {
   left: 42%;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 415ms;
+          animation-delay: 415ms;
+  -webkit-animation-duration: 9894ms;
+          animation-duration: 9894ms;
+}
+.confetti-piece:nth-child(7) {
+  left: 49%;
+  -webkit-transform: rotate(-79deg);
+          transform: rotate(-79deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 419ms;
+          animation-delay: 419ms;
+  -webkit-animation-duration: 2436ms;
+          animation-duration: 2436ms;
+}
+.confetti-piece:nth-child(8) {
+  left: 56%;
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 201ms;
+          animation-delay: 201ms;
+  -webkit-animation-duration: 2962ms;
+          animation-duration: 2962ms;
+}
+.confetti-piece:nth-child(9) {
+  left: 63%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 76ms;
+          animation-delay: 76ms;
+  -webkit-animation-duration: 8547ms;
+          animation-duration: 8547ms;
+}
+.confetti-piece:nth-child(10) {
+  left: 70%;
+  -webkit-transform: rotate(-59deg);
+          transform: rotate(-59deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 329ms;
+          animation-delay: 329ms;
+  -webkit-animation-duration: 7087ms;
+          animation-duration: 7087ms;
+}
+.confetti-piece:nth-child(11) {
+  left: 77%;
+  -webkit-transform: rotate(73deg);
+          transform: rotate(73deg);
+  -webkit-animation: makeItRain 8000ms infinite ease-out;
+          animation: makeItRain 8000ms infinite ease-out;
+  -webkit-animation-delay: 194ms;
+          animation-delay: 194ms;
+  -webkit-animation-duration: 6565ms;
+          animation-duration: 6565ms;
+}
+.confetti-piece:nth-child(12) {
+  left: 84%;
   -webkit-transform: rotate(-71deg);
           transform: rotate(-71deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 387ms;
-          animation-delay: 387ms;
-  -webkit-animation-duration: 7471ms;
-          animation-duration: 7471ms;
-}
-.confetti-piece:nth-child(7) {
-  left: 49%;
-  -webkit-transform: rotate(70deg);
-          transform: rotate(70deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 831ms;
-          animation-delay: 831ms;
-  -webkit-animation-duration: 3751ms;
-          animation-duration: 3751ms;
-}
-.confetti-piece:nth-child(8) {
-  left: 56%;
-  -webkit-transform: rotate(-18deg);
-          transform: rotate(-18deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 834ms;
-          animation-delay: 834ms;
-  -webkit-animation-duration: 9736ms;
-          animation-duration: 9736ms;
-}
-.confetti-piece:nth-child(9) {
-  left: 63%;
-  -webkit-transform: rotate(-58deg);
-          transform: rotate(-58deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 635ms;
-          animation-delay: 635ms;
-  -webkit-animation-duration: 3301ms;
-          animation-duration: 3301ms;
-}
-.confetti-piece:nth-child(10) {
-  left: 70%;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 242ms;
-          animation-delay: 242ms;
-  -webkit-animation-duration: 9614ms;
-          animation-duration: 9614ms;
-}
-.confetti-piece:nth-child(11) {
-  left: 77%;
-  -webkit-transform: rotate(-16deg);
-          transform: rotate(-16deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 423ms;
-          animation-delay: 423ms;
-  -webkit-animation-duration: 1416ms;
-          animation-duration: 1416ms;
-}
-.confetti-piece:nth-child(12) {
-  left: 84%;
-  -webkit-transform: rotate(63deg);
-          transform: rotate(63deg);
-  -webkit-animation: makeItRain 8000ms infinite ease-out;
-          animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 564ms;
-          animation-delay: 564ms;
-  -webkit-animation-duration: 4506ms;
-          animation-duration: 4506ms;
+  -webkit-animation-delay: 608ms;
+          animation-delay: 608ms;
+  -webkit-animation-duration: 7601ms;
+          animation-duration: 7601ms;
 }
 .confetti-piece:nth-child(13) {
   left: 91%;
-  -webkit-transform: rotate(17deg);
-          transform: rotate(17deg);
+  -webkit-transform: rotate(-71deg);
+          transform: rotate(-71deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 514ms;
-          animation-delay: 514ms;
-  -webkit-animation-duration: 6916ms;
-          animation-duration: 6916ms;
+  -webkit-animation-delay: 419ms;
+          animation-delay: 419ms;
+  -webkit-animation-duration: 4269ms;
+          animation-duration: 4269ms;
 }
 .confetti-piece:nth-child(odd) {
   background: #17d3ff;
@@ -881,10 +916,14 @@ header nav .resume:hover {
 }
 .skills .wrapper ul li i {
   font-size: 3rem;
-  color: #77bdfb;
+  color: #F13C91;
 }
 .skills .wrapper ul li p {
   margin-top: 10px;
+}
+
+.darkMode .skills .wrapper ul li i {
+  color: #77bdfb;
 }
 
 .theProjects .wrapper {
@@ -898,7 +937,7 @@ header nav .resume:hover {
   content: "";
   position: absolute;
   width: 6px;
-  background: #77bdfb;
+  background: #F13C91;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -914,8 +953,8 @@ header nav .resume:hover {
   width: 25px;
   height: 25px;
   right: -16px;
-  background-color: #77bdfb;
-  border: 4px solid #77bdfb;
+  background-color: #F13C91;
+  border: 4px solid #F13C91;
   top: 15px;
   border-radius: 50%;
   -webkit-transition: all 0.2s ease-in-out;
@@ -936,14 +975,14 @@ header nav .resume:hover {
 }
 .theProjects .wrapper h3 {
   text-align: center;
-  color: #77bdfb;
+  color: #F13C91;
   padding-top: 20px;
 }
 .theProjects .wrapper h3::after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #77bdfb;
+  background-color: #F13C91;
   display: inline-block;
 }
 .theProjects .wrapper .content {
@@ -1037,6 +1076,37 @@ header nav .resume:hover {
 .theProjects .wrapper .content a:hover,
 .theProjects .wrapper .content a:focus {
   background-color: whitesmoke;
+  color: #F13C91;
+  border: 1px solid #F13C91;
+}
+
+.darkMode .theProjects .wrapper ul::after {
+  background: #77bdfb;
+}
+.darkMode .theProjects .wrapper li::after {
+  background-color: #77bdfb;
+  border: 4px solid #77bdfb;
+}
+.darkMode .theProjects .wrapper h3 {
+  color: #77bdfb;
+}
+.darkMode .theProjects .wrapper h3::after {
+  background-color: #77bdfb;
+}
+.darkMode .theProjects .wrapper .content .textContent.showText {
+  background-color: #506680;
+}
+.darkMode .theProjects .wrapper .content li {
+  background-color: #353C51;
+  color: #ECF2F8;
+}
+.darkMode .theProjects .wrapper .content a {
+  background: #77bdfb;
+  color: #353C51;
+}
+.darkMode .theProjects .wrapper .content a:hover,
+.darkMode .theProjects .wrapper .content a:focus {
+  background: #506680;
   color: #77bdfb;
   border: 1px solid #77bdfb;
 }
@@ -1071,8 +1141,8 @@ header nav .resume:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 21px 21px 0 -5px #77bdfb;
-          box-shadow: 21px 21px 0 -5px #77bdfb;
+  -webkit-box-shadow: 21px 21px 0 -5px #F13C91;
+          box-shadow: 21px 21px 0 -5px #F13C91;
 }
 .about .aboutContent .imageContent .imageContainer {
   width: 100%;
@@ -1084,6 +1154,11 @@ header nav .resume:hover {
 }
 .about .aboutContent .textContent p:nth-of-type(2) {
   margin-top: 3%;
+}
+
+.darkMode .about .aboutContent .imageContent {
+  -webkit-box-shadow: 21px 21px 0 -5px #77bdfb;
+          box-shadow: 21px 21px 0 -5px #77bdfb;
 }
 
 .contact .wrapper {
@@ -1123,7 +1198,7 @@ header nav .resume:hover {
   margin-top: 3%;
 }
 .contact .wrapper .socialMediaIcons a {
-  color: #77bdfb;
+  color: #F13C91;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -1146,17 +1221,15 @@ header nav .resume:hover {
 .contact .wrapper form input,
 .contact .wrapper form textArea {
   background-color: whitesmoke;
-  color: #77bdfb;
-  border: 1px solid #77bdfb;
+  color: #F13C91;
+  border: 1px solid #F13C91;
   padding: 5px 30px;
   border-radius: 8px;
 }
 .contact .wrapper form input:hover,
 .contact .wrapper form input:focus,
 .contact .wrapper form textarea:hover,
-.contact .wrapper form textarea:focus,
-.contact .wrapper form button:hover,
-.contact .wrapper form button:focus {
+.contact .wrapper form textarea:focus {
   border: 1px solid #72cce3;
   -webkit-box-shadow: 0 2px 2px -2px black;
           box-shadow: 0 2px 2px -2px black;
@@ -1182,6 +1255,33 @@ header nav .resume:hover {
   -webkit-box-shadow: 0 2px 2px -2px black;
           box-shadow: 0 2px 2px -2px black;
   border: 1px solid transparent;
+}
+.contact .wrapper form button:hover, .contact .wrapper form button:focus {
+  background-color: #72cce3;
+}
+
+.darkMode .contact .wrapper .socialMediaIcons a {
+  color: #77bdfb;
+}
+.darkMode .contact .wrapper form input,
+.darkMode .contact .wrapper form textArea {
+  background-color: #506680;
+  color: #ECF2F8;
+  border: 1px solid #77bdfb;
+}
+.darkMode .contact .wrapper form input:hover,
+.darkMode .contact .wrapper form input:focus,
+.darkMode .contact .wrapper form textarea:hover,
+.darkMode .contact .wrapper form textarea:focus {
+  border: 1px solid #A70C54;
+}
+.darkMode .contact .wrapper form button {
+  background-color: #77bdfb;
+  color: #353C51;
+}
+.darkMode .contact .wrapper form button:hover, .darkMode .contact .wrapper form button:focus {
+  background-color: #A70C54;
+  color: #FFE5DF;
 }
 
 @media (max-width: 900px) {
@@ -1261,7 +1361,7 @@ header nav .resume:hover {
   }
   header nav .wrapper button {
     display: block;
-    color: #77bdfb;
+    color: #F13C91;
     font-size: 2rem;
     -ms-flex-item-align: end;
         align-self: flex-end;
@@ -1299,7 +1399,7 @@ header nav .resume:hover {
     width: 80%;
   }
   header nav .wrapper ul li a {
-    background-color: #77bdfb;
+    background-color: #F13C91;
     color: whitesmoke;
     display: inline-block;
     text-decoration: none;
@@ -1315,7 +1415,25 @@ header nav .wrapper ul li a:focus {
     color: black;
   }
   header nav .wrapper ul .resume {
-    background-color: #17d3ff;
+    background-color: #A70C54;
+    color: #ECF2F8;
+  }
+
+  .darkMode header nav .wrapper button {
+    color: #77bdfb;
+  }
+  .darkMode header nav .wrapper ul li a {
+    background: #77bdfb;
+    color: black;
+  }
+  .darkMode header nav .wrapper ul li a:hover,
+.darkMode header nav .wrapper ul li a:focus {
+    background: #506680;
+    color: #ECF2F8;
+  }
+  .darkMode header nav .wrapper ul .resume {
+    background-color: #A70C54;
+    color: #ECF2F8;
   }
 
   .home {

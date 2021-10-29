@@ -29,3 +29,13 @@
         }
     }
 }
+
+.darkMode .skills .wrapper {
+    ul {
+        li {
+            i {
+                color: $primaryColourDark;
+            }
+        }
+    }
+}
