@@ -1,4 +1,24 @@
-const init = () => {
+const toggleMode = () => {
+    const modeCheckbox = document.getElementById('toggle');
+    const bodyElement = document.querySelector("body");
+
+    if (modeCheckbox.checked) {
+        bodyElement.classList.add("darkMode");
+    }
+    
+    console.log(modeCheckbox.value);
+    modeCheckbox.addEventListener('click', () => {
+        if (modeCheckbox.checked) {
+            bodyElement.classList.add("darkMode");
+            console.log("checked");
+        } else {
+            bodyElement.classList.remove("darkMode");
+            console.log("unchecked");
+        }
+    });
+}
+
+const addListeners = () => {
     const burgerMenu = document.querySelector("#burgerMenu");
     const projects = document.querySelectorAll(".projects");
 
@@ -19,6 +39,11 @@ const init = () => {
         })
     });
 }
-AOS.init();
 
+const init = () => {
+    addListeners();
+    toggleMode();
+}
+
+AOS.init();
 init();

@@ -9,6 +9,15 @@ section {
     }
 }
 
+.darkMode section {
+    &:nth-child(odd) {
+        background-color: $primaryBackgroundDark;
+    }
+    &:nth-child(even) {
+        background-color: $secondaryBackgroundDark;
+    }
+}
+
 .home,
 .theProjects,
 .contact {
@@ -50,4 +59,8 @@ section {
 
 .shape-fill {
     fill: $secondaryBackground;
+}
+
+.darkMode .shape-fill {
+    fill: $secondaryBackgroundDark;
 }

@@ -241,6 +241,10 @@ html {
   font-weight: 400;
 }
 
+body.darkMode {
+  color: #ECF2F8;
+}
+
 h1, h2, h3, p, nav, ul, li {
   margin: 0;
   padding: 0;
@@ -262,7 +266,7 @@ h2 {
 h2::after {
   content: "";
   text-align: center;
-  background-color: #F13C91;
+  background-color: #77bdfb;
   display: block;
   height: 2px;
   width: 50px;
@@ -299,14 +303,14 @@ p {
 
 .colour,
 .home h2 {
-  color: #F13C91;
+  color: #77bdfb;
 }
 
 .underline {
   text-decoration: underline;
   color: black;
-  -webkit-text-decoration-color: #F13C91;
-          text-decoration-color: #F13C91;
+  -webkit-text-decoration-color: #77bdfb;
+          text-decoration-color: #77bdfb;
 }
 
 img {
@@ -315,9 +319,14 @@ img {
 }
 
 footer {
+  background: whitesmoke;
   text-align: center;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
+}
+
+.darkMode footer {
+  background: #506680;
 }
 
 section {
@@ -328,6 +337,13 @@ section:nth-child(odd) {
 }
 section:nth-child(even) {
   background-color: whitesmoke;
+}
+
+.darkMode section:nth-child(odd) {
+  background-color: #353C51;
+}
+.darkMode section:nth-child(even) {
+  background-color: #506680;
 }
 
 .home,
@@ -374,6 +390,10 @@ section:nth-child(even) {
   fill: whitesmoke;
 }
 
+.darkMode .shape-fill {
+  fill: #506680;
+}
+
 header {
   background-color: #FFE5DF;
 }
@@ -407,7 +427,7 @@ header nav li a {
 }
 header nav li a:hover,
 header nav li a:focus {
-  background-color: #F13C91;
+  background-color: #77bdfb;
   color: whitesmoke;
   -webkit-box-shadow: 0 2px 2px -2px black;
           box-shadow: 0 2px 2px -2px black;
@@ -417,9 +437,189 @@ header nav .resume {
   color: whitesmoke;
 }
 header nav .resume:hover {
-  background-color: #17d3ff;
+  background-color: #72cce3;
 }
 
+.home {
+  position: relative;
+}
+.home .modeToggleCheck {
+  position: absolute;
+  top: 0;
+}
+.home .toggleCheckbox {
+  display: none;
+}
+.home .toggleLabel {
+  width: 100px;
+  height: 50px;
+  background: #96dcee;
+  border-radius: 50px;
+  border: 5px solid #72cce3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-transition: all 350ms ease-in;
+  transition: all 350ms ease-in;
+}
+.home .toggleLabel:before {
+  -webkit-animation-name: reverse;
+          animation-name: reverse;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: all 350ms ease-in;
+  transition: all 350ms ease-in;
+  content: "";
+  width: 38px;
+  height: 38px;
+  border: 3px solid #f5eb71;
+  top: 1px;
+  left: 2px;
+  position: absolute;
+  border-radius: 38px;
+  background: #fffaa8;
+}
+.home .toggleLabelBackground {
+  width: 8px;
+  height: 3px;
+  border-radius: 5px;
+  position: relative;
+  background: white;
+  left: 57px;
+  top: 17px;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+.home .toggleLabelBackground::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background: white;
+  left: -11px;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+.home .toggleLabelBackground::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background: white;
+  left: -4px;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+.home .toggleCheckbox:checked + .toggleLabel {
+  background: #6b7abb;
+  border-color: #5d6baa;
+}
+.home .toggleCheckbox:checked + .toggleLabel:before {
+  background: white;
+  border-color: #e8e8ea;
+  -webkit-animation-name: switch;
+          animation-name: switch;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.home .toggleLabel:after {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  -webkit-box-shadow: #e8e8ea -13px 0 0 2px, #e8e8ea -19px 9px 0 -1px;
+          box-shadow: #e8e8ea -13px 0 0 2px, #e8e8ea -19px 9px 0 -1px;
+  left: 75px;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+.home .toggleCheckbox:checked + .toggleLabel:after {
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
+  opacity: 1;
+}
+.home .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground {
+  left: 32px;
+  width: 3px;
+}
+.home .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground::before {
+  width: 3px;
+  height: 3px;
+  top: -11px;
+}
+.home .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground::after {
+  width: 3px;
+  height: 3px;
+  left: -18px;
+  top: 10px;
+}
+@-webkit-keyframes reverse {
+  0% {
+    left: 50px;
+    width: 38px;
+  }
+  60% {
+    left: 20px;
+    width: 68px;
+  }
+  100% {
+    left: 2px;
+  }
+}
+@keyframes reverse {
+  0% {
+    left: 50px;
+    width: 38px;
+  }
+  60% {
+    left: 20px;
+    width: 68px;
+  }
+  100% {
+    left: 2px;
+  }
+}
+@-webkit-keyframes switch {
+  0% {
+    left: 2px;
+  }
+  60% {
+    left: 2px;
+    width: 68px;
+  }
+  100% {
+    left: 50px;
+    width: 38px;
+  }
+}
+@keyframes switch {
+  0% {
+    left: 2px;
+  }
+  60% {
+    left: 2px;
+    width: 68px;
+  }
+  100% {
+    left: 50px;
+    width: 38px;
+  }
+}
 .home .wrapper {
   height: 95vh;
   display: -webkit-box;
@@ -465,146 +665,146 @@ header nav .resume:hover {
 }
 .confetti-piece:nth-child(1) {
   left: 7%;
-  -webkit-transform: rotate(-34deg);
-          transform: rotate(-34deg);
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 220ms;
-          animation-delay: 220ms;
-  -webkit-animation-duration: 4603ms;
-          animation-duration: 4603ms;
+  -webkit-animation-delay: 693ms;
+          animation-delay: 693ms;
+  -webkit-animation-duration: 9495ms;
+          animation-duration: 9495ms;
 }
 .confetti-piece:nth-child(2) {
   left: 14%;
-  -webkit-transform: rotate(24deg);
-          transform: rotate(24deg);
+  -webkit-transform: rotate(39deg);
+          transform: rotate(39deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 233ms;
-          animation-delay: 233ms;
-  -webkit-animation-duration: 2976ms;
-          animation-duration: 2976ms;
+  -webkit-animation-delay: 797ms;
+          animation-delay: 797ms;
+  -webkit-animation-duration: 4779ms;
+          animation-duration: 4779ms;
 }
 .confetti-piece:nth-child(3) {
   left: 21%;
-  -webkit-transform: rotate(8deg);
-          transform: rotate(8deg);
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 553ms;
-          animation-delay: 553ms;
-  -webkit-animation-duration: 1898ms;
-          animation-duration: 1898ms;
+  -webkit-animation-delay: 278ms;
+          animation-delay: 278ms;
+  -webkit-animation-duration: 8801ms;
+          animation-duration: 8801ms;
 }
 .confetti-piece:nth-child(4) {
   left: 28%;
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 892ms;
-          animation-delay: 892ms;
-  -webkit-animation-duration: 6517ms;
-          animation-duration: 6517ms;
+  -webkit-animation-delay: 98ms;
+          animation-delay: 98ms;
+  -webkit-animation-duration: 4307ms;
+          animation-duration: 4307ms;
 }
 .confetti-piece:nth-child(5) {
   left: 35%;
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 119ms;
-          animation-delay: 119ms;
-  -webkit-animation-duration: 3929ms;
-          animation-duration: 3929ms;
+  -webkit-animation-delay: 108ms;
+          animation-delay: 108ms;
+  -webkit-animation-duration: 8366ms;
+          animation-duration: 8366ms;
 }
 .confetti-piece:nth-child(6) {
   left: 42%;
-  -webkit-transform: rotate(34deg);
-          transform: rotate(34deg);
+  -webkit-transform: rotate(-71deg);
+          transform: rotate(-71deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 612ms;
-          animation-delay: 612ms;
-  -webkit-animation-duration: 8966ms;
-          animation-duration: 8966ms;
+  -webkit-animation-delay: 387ms;
+          animation-delay: 387ms;
+  -webkit-animation-duration: 7471ms;
+          animation-duration: 7471ms;
 }
 .confetti-piece:nth-child(7) {
   left: 49%;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 12ms;
-          animation-delay: 12ms;
-  -webkit-animation-duration: 2042ms;
-          animation-duration: 2042ms;
+  -webkit-animation-delay: 831ms;
+          animation-delay: 831ms;
+  -webkit-animation-duration: 3751ms;
+          animation-duration: 3751ms;
 }
 .confetti-piece:nth-child(8) {
   left: 56%;
-  -webkit-transform: rotate(-73deg);
-          transform: rotate(-73deg);
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 420ms;
-          animation-delay: 420ms;
-  -webkit-animation-duration: 2560ms;
-          animation-duration: 2560ms;
+  -webkit-animation-delay: 834ms;
+          animation-delay: 834ms;
+  -webkit-animation-duration: 9736ms;
+          animation-duration: 9736ms;
 }
 .confetti-piece:nth-child(9) {
   left: 63%;
-  -webkit-transform: rotate(-34deg);
-          transform: rotate(-34deg);
+  -webkit-transform: rotate(-58deg);
+          transform: rotate(-58deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 704ms;
-          animation-delay: 704ms;
-  -webkit-animation-duration: 9982ms;
-          animation-duration: 9982ms;
+  -webkit-animation-delay: 635ms;
+          animation-delay: 635ms;
+  -webkit-animation-duration: 3301ms;
+          animation-duration: 3301ms;
 }
 .confetti-piece:nth-child(10) {
   left: 70%;
-  -webkit-transform: rotate(-46deg);
-          transform: rotate(-46deg);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 791ms;
-          animation-delay: 791ms;
-  -webkit-animation-duration: 6011ms;
-          animation-duration: 6011ms;
+  -webkit-animation-delay: 242ms;
+          animation-delay: 242ms;
+  -webkit-animation-duration: 9614ms;
+          animation-duration: 9614ms;
 }
 .confetti-piece:nth-child(11) {
   left: 77%;
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+  -webkit-transform: rotate(-16deg);
+          transform: rotate(-16deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 43ms;
-          animation-delay: 43ms;
-  -webkit-animation-duration: 3069ms;
-          animation-duration: 3069ms;
+  -webkit-animation-delay: 423ms;
+          animation-delay: 423ms;
+  -webkit-animation-duration: 1416ms;
+          animation-duration: 1416ms;
 }
 .confetti-piece:nth-child(12) {
   left: 84%;
-  -webkit-transform: rotate(-33deg);
-          transform: rotate(-33deg);
+  -webkit-transform: rotate(63deg);
+          transform: rotate(63deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 775ms;
-          animation-delay: 775ms;
-  -webkit-animation-duration: 1997ms;
-          animation-duration: 1997ms;
+  -webkit-animation-delay: 564ms;
+          animation-delay: 564ms;
+  -webkit-animation-duration: 4506ms;
+          animation-duration: 4506ms;
 }
 .confetti-piece:nth-child(13) {
   left: 91%;
-  -webkit-transform: rotate(31deg);
-          transform: rotate(31deg);
+  -webkit-transform: rotate(17deg);
+          transform: rotate(17deg);
   -webkit-animation: makeItRain 8000ms infinite ease-out;
           animation: makeItRain 8000ms infinite ease-out;
-  -webkit-animation-delay: 515ms;
-          animation-delay: 515ms;
-  -webkit-animation-duration: 7004ms;
-          animation-duration: 7004ms;
+  -webkit-animation-delay: 514ms;
+          animation-delay: 514ms;
+  -webkit-animation-duration: 6916ms;
+          animation-duration: 6916ms;
 }
 .confetti-piece:nth-child(odd) {
   background: #17d3ff;
@@ -681,7 +881,7 @@ header nav .resume:hover {
 }
 .skills .wrapper ul li i {
   font-size: 3rem;
-  color: #F13C91;
+  color: #77bdfb;
 }
 .skills .wrapper ul li p {
   margin-top: 10px;
@@ -698,7 +898,7 @@ header nav .resume:hover {
   content: "";
   position: absolute;
   width: 6px;
-  background: #F13C91;
+  background: #77bdfb;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -714,8 +914,8 @@ header nav .resume:hover {
   width: 25px;
   height: 25px;
   right: -16px;
-  background-color: #F13C91;
-  border: 4px solid #F13C91;
+  background-color: #77bdfb;
+  border: 4px solid #77bdfb;
   top: 15px;
   border-radius: 50%;
   -webkit-transition: all 0.2s ease-in-out;
@@ -736,14 +936,14 @@ header nav .resume:hover {
 }
 .theProjects .wrapper h3 {
   text-align: center;
-  color: #F13C91;
+  color: #77bdfb;
   padding-top: 20px;
 }
 .theProjects .wrapper h3::after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #F13C91;
+  background-color: #77bdfb;
   display: inline-block;
 }
 .theProjects .wrapper .content {
@@ -837,8 +1037,8 @@ header nav .resume:hover {
 .theProjects .wrapper .content a:hover,
 .theProjects .wrapper .content a:focus {
   background-color: whitesmoke;
-  color: #F13C91;
-  border: 1px solid #F13C91;
+  color: #77bdfb;
+  border: 1px solid #77bdfb;
 }
 
 .about {
@@ -871,8 +1071,8 @@ header nav .resume:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 21px 21px 0 -5px #F13C91;
-          box-shadow: 21px 21px 0 -5px #F13C91;
+  -webkit-box-shadow: 21px 21px 0 -5px #77bdfb;
+          box-shadow: 21px 21px 0 -5px #77bdfb;
 }
 .about .aboutContent .imageContent .imageContainer {
   width: 100%;
@@ -923,7 +1123,7 @@ header nav .resume:hover {
   margin-top: 3%;
 }
 .contact .wrapper .socialMediaIcons a {
-  color: #F13C91;
+  color: #77bdfb;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -946,8 +1146,8 @@ header nav .resume:hover {
 .contact .wrapper form input,
 .contact .wrapper form textArea {
   background-color: whitesmoke;
-  color: #F13C91;
-  border: 1px solid #F13C91;
+  color: #77bdfb;
+  border: 1px solid #77bdfb;
   padding: 5px 30px;
   border-radius: 8px;
 }
@@ -957,7 +1157,7 @@ header nav .resume:hover {
 .contact .wrapper form textarea:focus,
 .contact .wrapper form button:hover,
 .contact .wrapper form button:focus {
-  border: 1px solid #17d3ff;
+  border: 1px solid #72cce3;
   -webkit-box-shadow: 0 2px 2px -2px black;
           box-shadow: 0 2px 2px -2px black;
 }
@@ -1061,7 +1261,7 @@ header nav .resume:hover {
   }
   header nav .wrapper button {
     display: block;
-    color: #F13C91;
+    color: #77bdfb;
     font-size: 2rem;
     -ms-flex-item-align: end;
         align-self: flex-end;
@@ -1099,7 +1299,7 @@ header nav .resume:hover {
     width: 80%;
   }
   header nav .wrapper ul li a {
-    background-color: #F13C91;
+    background-color: #77bdfb;
     color: whitesmoke;
     display: inline-block;
     text-decoration: none;

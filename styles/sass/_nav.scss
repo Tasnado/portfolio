@@ -39,21 +39,8 @@ header {
         .resume {
             @include primBackgroundAndSecColour($darkerPink);
             &:hover {
-                background-color: #17d3ff;
+                background-color: $blueHover;
             }
         }
-    }
-}
-
-.home .wrapper {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    p {
-        max-width: 550px;
-        margin: 25px 0;
     }
 }

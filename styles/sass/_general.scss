@@ -4,6 +4,10 @@ html {
     font-weight: 400;
 }
 
+body.darkMode {
+    color: $fontColourDark;
+}
+
 h1, h2, h3, p, nav, ul, li {
     margin: 0;
     padding: 0;
@@ -78,7 +82,11 @@ img {
 }
 
 footer {
+    background: $secondaryBackground;
     text-align: center;
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
+}
+.darkMode footer {
+    background: $secondaryBackgroundDark;
 }
