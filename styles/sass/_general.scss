@@ -110,3 +110,31 @@ footer {
 .darkMode footer {
     background: $secondaryBackgroundDark;
 }
+
+::placeholder {
+    color: $primaryColour;
+    opacity: 0.9;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primaryColour;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $primaryColour;
+}
+
+.darkMode {
+    ::placeholder {
+        color: $fontColourDark;
+        opacity: 0.9;
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $fontColourDark;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $fontColourDark;
+    }
+}
