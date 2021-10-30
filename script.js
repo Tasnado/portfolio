@@ -1,3 +1,15 @@
+const displayConfetti = () => {
+    const toggleConfettiButton = document.getElementById("toggleConfetti");
+    const confettiBox = document.querySelector(".home");
+    const animationIcon = toggleConfettiButton.querySelector("i");
+
+    toggleConfettiButton.addEventListener('click', function() {
+        confettiBox.classList.toggle('confetti');
+        animationIcon.classList.toggle("fa-stop-circle");
+        animationIcon.classList.toggle("fa-play-circle");
+    })
+}
+
 const toggleMode = () => {
     const modeCheckbox = document.getElementById('toggle');
     const bodyElement = document.querySelector("body");
@@ -10,10 +22,8 @@ const toggleMode = () => {
     modeCheckbox.addEventListener('click', () => {
         if (modeCheckbox.checked) {
             bodyElement.classList.add("darkMode");
-            console.log("checked");
         } else {
             bodyElement.classList.remove("darkMode");
-            console.log("unchecked");
         }
     });
 }
@@ -43,6 +53,7 @@ const addListeners = () => {
 const init = () => {
     addListeners();
     toggleMode();
+    displayConfetti();
 }
 
 AOS.init();

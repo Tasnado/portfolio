@@ -13,10 +13,27 @@
         }
     }
 
+    .toggleConfetti {
+        background: transparent;
+        border: none;
+        margin-left: 10px;
+
+        i {
+            font-size: 1.5rem;
+            color: $primaryColour;
+            transition: all .2s ease-in-out;
+        }
+        i:hover,
+        i:focus {
+            transform: scale(1.2);
+        }
+    }
+
     .modeToggleCheck {
         position: absolute;
         top: 10px;
         left: 0;
+        display: flex;
     }
 
     .toggleCheckbox {
@@ -150,5 +167,11 @@
             left: 50px;
             width: 38px;
         }
+    }
+}
+
+.darkMode .toggleConfetti {
+    i {
+        color: $primaryColourDark;
     }
 }

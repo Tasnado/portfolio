@@ -4,6 +4,10 @@ html {
     font-weight: 400;
 }
 
+body {
+    color: $fontColourLight;
+}
+
 body.darkMode {
     color: $fontColourDark;
 }

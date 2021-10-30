@@ -19,7 +19,7 @@ $duration: 1000;
     overflow: hidden;
 }
 
-.confetti-piece {
+.confetti .confetti-piece {
     position: absolute;
     width: 8px;
     height: 16px;
@@ -28,14 +28,14 @@ $duration: 1000;
     opacity: 0;
 
     @for $i from 1 through 13 {
-        &:nth-child(#{$i}) {
-          left: $i * 7%;
-          transform: rotate(#{randomNum(-80, 80)}deg);
-          animation: makeItRain $duration * 8ms infinite ease-out;
-          animation-delay: #{randomNum(0, $duration * .9)}ms;
-          animation-duration: #{randomNum($duration * .5, $duration * 10)}ms
-        }
+      &:nth-child(#{$i}) {
+        left: $i * 7%;
+        transform: rotate(#{randomNum(-80, 80)}deg);
+        animation: makeItRain $duration * 8ms infinite ease-out;
+        animation-delay: #{randomNum(0, $duration * .9)}ms;
+        animation-duration: #{randomNum($duration * .5, $duration * 10)}ms
       }
+    }
     
     &:nth-child(odd) {
       background: $blue;
@@ -61,18 +61,18 @@ $duration: 1000;
     &:nth-child(4n-7) {
       background: $pink;
     }
+}
+
+@keyframes makeItRain {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes makeItRain {
-    from {
-      opacity: 0;
-    }
     
-    50% {
-      opacity: 1;
-    }
-    
-    to {
-      transform: translateY(90vh);
-    }
+  50% {
+    opacity: 1;
   }
+    
+  to {
+    transform: translateY(90vh);
+  }
+}
